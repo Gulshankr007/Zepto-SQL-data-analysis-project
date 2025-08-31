@@ -43,6 +43,7 @@ Using SQL to:
 ## 🔧 Workflow
 
 ### 1️⃣ Database & Table Creation
+
 ```sql
 CREATE TABLE zepto (
   sku_id SERIAL PRIMARY KEY,
@@ -56,6 +57,8 @@ CREATE TABLE zepto (
   outOfStock BOOLEAN,
   quantity INTEGER
 );
+
+```
 
 2️⃣ Data Import
 
@@ -71,41 +74,27 @@ FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"'
 3️⃣ Data Exploration 🔍
 
 Counted total records
-
 Sampled dataset structure
-
 Checked NULL values
-
 Extracted distinct product categories
-
 Compared in-stock vs out-of-stock products
-
 Identified duplicate SKUs
 
 4️⃣ Data Cleaning 🧹
 
 Removed rows where mrp or discountedSellingPrice = 0
-
 Converted prices from paise ➝ rupees
-
 Ensured consistency in numeric fields
 
 5️⃣ Business Insights 📊
 
 🔝 Top 10 best-value products (highest discount %)
-
 🚫 High-MRP products currently out of stock
-
 💰 Estimated potential revenue by category
-
 💎 Filtered expensive products (MRP > ₹500) with low discount
-
 📉 Ranked top 5 categories with highest average discounts
-
 ⚖️ Calculated price per gram to find value-for-money products
-
 📦 Grouped products into Low / Medium / Bulk weight categories
-
 🏋️ Total inventory weight by product category
 
 SELECT category,
@@ -119,15 +108,11 @@ LIMIT 5;
 🚀 Tech Stack
 
 🗄️ PostgreSQL / pgAdmin
-
 🧑‍💻 SQL (CTEs, Window Functions, Aggregates)
-
 📊 Analytics Tools: Power BI / Tableau-ready outputs
 
 📌 Key Learnings
 
 How to handle real-world messy catalog data
-
 Building scalable SQL queries for insights
-
 Translating raw data ➝ business value
