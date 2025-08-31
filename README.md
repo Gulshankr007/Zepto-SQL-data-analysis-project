@@ -66,11 +66,6 @@ Imported CSV via pgAdmin.
 
 Fixed UTF-8 encoding issues by saving file in CSV UTF-8 format.
 
-Alternative using \copy:
-\copy zepto(category,name,mrp,discountPercent,availableQuantity,
-            discountedSellingPrice,weightInGms,outOfStock,quantity)
-FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
-
 3️⃣ Data Exploration 🔍
 
 Counted total records
@@ -88,22 +83,23 @@ Ensured consistency in numeric fields
 
 5️⃣ Business Insights 📊
 
-🔝 Top 10 best-value products (highest discount %)
+🔝 Top 10 best-value products (highest discount %) 
+
 🚫 High-MRP products currently out of stock
+
 💰 Estimated potential revenue by category
+
 💎 Filtered expensive products (MRP > ₹500) with low discount
+
 📉 Ranked top 5 categories with highest average discounts
+
 ⚖️ Calculated price per gram to find value-for-money products
+
 📦 Grouped products into Low / Medium / Bulk weight categories
+
 🏋️ Total inventory weight by product category
 
-SELECT category,
-       ROUND(AVG(discountPercent),2) AS avg_discount,
-       COUNT(*) AS total_products
-FROM zepto
-GROUP BY category
-ORDER BY avg_discount DESC
-LIMIT 5;
+
 
 🚀 Tech Stack
 
