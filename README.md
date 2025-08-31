@@ -100,7 +100,6 @@ Ensured consistency in numeric fields
 🏋️ Total inventory weight by product category
 
 
-
 🚀 Tech Stack
 
 🗄️ PostgreSQL / pgAdmin
