@@ -1,5 +1,7 @@
 # Zepto-SQL-data-analysis-project
 
+![image alt](https://github.com/Gulshankr007/Zepto-SQL-data-analysis-project/blob/55efab7fad774a2640eba0726619281d4f7c981f/Zepto%20.png)
+
 🛒 Zepto E-commerce SQL Data Analyst  Project
 This is a complete, real-world data analyst  project based on an e-commerce inventory dataset scraped from Zepto — one of India’s fastest-growing quick-commerce startups. This project simulates real analyst workflows, from raw data exploration to business-focused data analysis.
 
